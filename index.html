@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#170f12" />
+    <title>Aşık Seyrani | Hüsne Mağrur Olma Ey Yüzü Mâhım</title>
+    <link rel="preload" href="./siir10.mp3" as="audio" type="audio/mpeg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="is-locked">
+    <div class="backdrop" aria-hidden="true">
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <div class="glow glow-c"></div>
+      <div class="grain"></div>
+    </div>
+
+    <button class="start-screen" id="startScreen" type="button">
+      <span class="start-screen__frame"></span>
+      <span class="start-screen__eyebrow">Bilim Şenliği Sunumu</span>
+      <strong class="start-screen__title">Hüsne Mağrur<br />Olma Ey Yüzü<br />Mâhım</strong>
+      <span class="start-screen__meta">Aşık Seyrani • 00:51</span>
+      <span class="start-screen__hint">Şiiri başlatmak için ekrana dokun</span>
+      <span class="start-screen__note">
+        Mobil tarayıcılar sesli otomatik başlatmayı engellediği için ilk dokunuş gerekiyor.
+      </span>
+    </button>
+
+    <audio id="poemAudio" src="./siir10.mp3" preload="auto" loop playsinline></audio>
+
+    <main class="app">
+      <section class="hero">
+        <div class="hero__topline">
+          <span class="pill">Aşık Seyrani</span>
+          <span class="pill">Türkü Şiiri</span>
+          <span class="pill">00:51</span>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">Sitemli ve yoğun bir şiir akışı</p>
+          <h1>Hüsne Mağrur Olma<br />Ey Yüzü Mâhım</h1>
+          <p class="intro">
+            Şiir tek dokunuşla başlar, döngüde devam eder ve temizlenmiş dizeler kısa ama etkili
+            bir akış halinde ritimle birlikte öne çıkar.
+          </p>
+        </div>
+
+        <section class="player-card" aria-label="Şiir oynatıcısı">
+          <div class="player-card__halo"></div>
+          <div class="player-card__header">
+            <span class="player-card__label">Canlı akış</span>
+            <span class="player-card__status" id="playState">Başlatılmadı</span>
+          </div>
+
+          <div class="player-card__core">
+            <div class="orb">
+              <svg class="progress-ring" viewBox="0 0 180 180" aria-hidden="true">
+                <circle class="progress-ring__track" cx="90" cy="90" r="74"></circle>
+                <circle class="progress-ring__value" cx="90" cy="90" r="74"></circle>
+              </svg>
+              <div class="orb__center">
+                <span class="orb__label">Süre</span>
+                <strong id="currentTime">00:00</strong>
+                <span id="totalTime">00:51</span>
+              </div>
+            </div>
+
+            <div class="equalizer" id="equalizer" aria-hidden="true"></div>
+          </div>
+
+          <div class="controls">
+            <button class="control-button" id="soundToggle" type="button">Sesi Kapat</button>
+            <button class="control-button control-button--ghost" id="restartButton" type="button">
+              Baştan Sar
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section class="lyrics">
+        <div class="section-title">
+          <p class="eyebrow">Şiirin sözleri</p>
+          <h2>Zaman damgaları ve müzik satırı çıkarıldı, sözler akış kartlarına bölündü</h2>
+        </div>
+
+        <div class="verses" id="verses">
+          <article class="verse-card is-active" data-start="0" data-end="11" style="--delay: 0s;">
+            <span class="verse-card__index">I</span>
+            <p>Hüsnü mağrur olma ey yüzü mâhım</p>
+            <p>Niceler yokuştan inişten geçti kâr etmedi sana</p>
+          </article>
+
+          <article class="verse-card" data-start="11" data-end="20" style="--delay: 0.6s;">
+            <span class="verse-card__index">II</span>
+            <p>Feryadı Allah'ım tiri ahım küf u keşişten geçti</p>
+            <p>Seni bir mürüvvet seni bir vefa kim kime etmiştir ettin bana</p>
+          </article>
+
+          <article class="verse-card" data-start="20" data-end="29" style="--delay: 1.2s;">
+            <span class="verse-card__index">III</span>
+            <p>Şimdi de yâr olmak istersin ama nideyim</p>
+            <p>Sevdiğim iş işten geçti benden sana izin</p>
+          </article>
+
+          <article class="verse-card" data-start="29" data-end="38" style="--delay: 1.8s;">
+            <span class="verse-card__index">IV</span>
+            <p>Ey gözü affet var kimi</p>
+            <p>İstersen eyleme muhabbet çimden geri</p>
+          </article>
+
+          <article class="verse-card" data-start="38" data-end="44" style="--delay: 2.4s;">
+            <span class="verse-card__index">V</span>
+            <p>Sen sağ ben selamet</p>
+          </article>
+
+          <article class="verse-card" data-start="44" data-end="51.49" style="--delay: 3s;">
+            <span class="verse-card__index">VI</span>
+            <p>Seyrani bu alışverişten geçti</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
